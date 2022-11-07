@@ -3,7 +3,7 @@ import http from 'http'
 import cors from 'cors'
 import { Socket } from "socket.io";
 import { createRoom } from "./services/rooms";
-import { PORT } from "./util/secrets";
+import { LOCAL_URL, PORT } from "./util/secrets";
 const { Server } = require("socket.io");
 
 const app: Application = express()
@@ -11,7 +11,7 @@ app.use(cors())
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: process.env.LOCAL_URL,
+        origin: LOCAL_URL,
         methods: ['GET', 'POST']
     }    
 })
@@ -24,7 +24,6 @@ io.on('connection', (socket: Socket) => {
     socket.join(room);
 
     socket.on('update-doc', (updatedDoc) => {
-        console.log(room)
         socket.to(room).emit('doc-updated', updatedDoc)
     })
 })
