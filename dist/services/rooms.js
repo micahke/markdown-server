@@ -15,7 +15,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.authenticateRoom = exports.createRoom = void 0;
 const mongoose_1 = __importDefault(require("mongoose"));
 const room_1 = require("../database/schemas/room");
-const static_1 = require("../static");
 const generate_ids_1 = require("../util/generate-ids");
 function createRoom(req, res) {
     const roomID = (0, generate_ids_1.generateRandomString)(12, 'alphanumeric');
@@ -32,7 +31,6 @@ function createRoom(req, res) {
     res.send({
         roomID: roomID,
         code: passcode,
-        initialDoc: static_1.initialData
     });
 }
 exports.createRoom = createRoom;
