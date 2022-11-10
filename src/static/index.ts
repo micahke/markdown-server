@@ -4,12 +4,14 @@ import path from "path";
 import fs from 'fs'
 
 
-const filePath = path.join(__dirname, 'initial.md')
+const filePath = path.join(__dirname, '..', '..', 'initial.md')
 
 
 export const initialData = fs.readFileSync(filePath, {
 	encoding: 'utf8',
 	flag: 'r'
 })
+
+console.log(initialData)
 
 
