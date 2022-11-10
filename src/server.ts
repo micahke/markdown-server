@@ -6,12 +6,13 @@ import { authenticateRoom, createRoom } from "./services/rooms";
 import { LOCAL_URL, PORT } from "./util/secrets";
 import {onSocketConnect} from "./socket";
 import './database'
+import './static'
 import helmet from "helmet";
-
+import {getInitialDoc} from "./services/initial-doc";
 
 const app: Application = express()
 app.use(cors())
-// app.use(helmet())
+app.use(helmet())
 app.use(express.json())
 
 
@@ -24,6 +25,7 @@ const io = new Server(server, {
 })
 
 app.get('/create-room', createRoom)
+app.get('/initial-doc', getInitialDoc)
 app.post('/authenticate-room', authenticateRoom)
 
 

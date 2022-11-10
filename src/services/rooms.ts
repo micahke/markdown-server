@@ -2,6 +2,7 @@
 import { Request, Response } from "express";
 import mongoose from "mongoose";
 import {RoomModel, RoomSchema} from "../database/schemas/room";
+import {initialData} from "../static";
 import { generateRandomString } from "../util/generate-ids";
 
 
@@ -24,7 +25,8 @@ export function createRoom(req: Request, res: Response) {
 
     res.send({
         roomID: roomID,
-				code: passcode
+				code: passcode,
+				initialDoc: initialData
     })
 }
 
