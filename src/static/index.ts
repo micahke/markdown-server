@@ -12,6 +12,5 @@ export const initialData = fs.readFileSync(filePath, {
 	flag: 'r'
 })
 
-console.log(initialData)
 
 
