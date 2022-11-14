@@ -1,6 +1,6 @@
-import dotenv from 'dotenv-flow'
+import dotenv from "dotenv-flow";
 
-dotenv.config()
+dotenv.config();
 
 export const PORT = process.env.PORT || 2500;
 export const LOCAL_URL = process.env.LOCAL_URL;
