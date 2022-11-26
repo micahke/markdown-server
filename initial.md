@@ -8,7 +8,6 @@ Welcome to the Markdown Editor. If you are new to Markdown, use this document as
 
 Relational to the number of `#` before the title. You get the picture...
 
-
 ## Code Blocks
 
 Code blocks can be designated like the following
@@ -29,10 +28,9 @@ function addNums(a: number, b: number): number {
 
 **Bold Text**
 
-*Italic Text*
+_Italic Text_
 
 `Code-fenced text`
-
 
 ## Lists
 
@@ -63,17 +61,12 @@ To link to an email, just enclose in angle brackets: <fragmentdev@gmail.com>
 Tables can be made with the format below, but it may be easier to generate one [here](https://www.tablesgenerator.com/markdown_tables) before pasting.
 
 | Column 1 | Column 2                   | Column 3  |
-|----------|----------------------------|-----------|
+| -------- | -------------------------- | --------- |
 | 10       | 20                         | 30        |
 | `text`   | [Link](https://google.com) | More text |
 
-
 ## Images
 
-Images can be displayed using the following format. 
+Images can be displayed using the following format.
 
 ![](https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg)
-
-
-
-
